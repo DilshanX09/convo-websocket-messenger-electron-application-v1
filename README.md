@@ -181,8 +181,8 @@ Before you begin, ensure you have the following installed:
 
 #### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/DilshanX09/convo-websocket-messenger-application-v1
-cd convo-websocket-messenger-application-v1
+git clone https://github.com/DilshanX09/convo-websocket-messenger-electron-application-v1
+cd convo-websocket-messenger-electron-application-v1
 ```
 
 #### 2️⃣ Install Dependencies
