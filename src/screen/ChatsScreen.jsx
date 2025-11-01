@@ -1193,7 +1193,7 @@ const Chat = () => {
                                             >
                                                 <div className="flex gap-1">
                                                     <div>
-                                                        <img className={`w-12 h-12 mr-1 rounded-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-[#2b2b2b]'}`} src={!user[0].PROFILE_IMAGE_URL ? (theme === 'light' ? user_image : user_white) : `http://localhost:5000${user[0].PROFILE_IMAGE_URL}`} />
+                                                        <img className={`w-12 h-12 mr-1 object-cover rounded-full ${theme === 'light' ? 'bg-gray-200 ' : 'bg-[#2b2b2b]'}`} src={!user[0].PROFILE_IMAGE_URL ? (theme === 'light' ? user_image : user_white) : `http://localhost:5000${user[0].PROFILE_IMAGE_URL}`} />
 
                                                     </div>
                                                     <div className="flex flex-col justify-center">
@@ -1252,7 +1252,7 @@ const Chat = () => {
                                     if (profileView == true) setProfilePreview(false); else setProfilePreview(true);
                                 }} >
 
-                                    <img className={`w-12 h-12 mr-2 rounded-full ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'}`} src={!selectProfile.PROFILE_IMAGE_URL ? (theme === 'light' ? user_image : user_white) : selectedUserProfileImage} />
+                                    <img className={`w-12 h-12 mr-2 object-cover rounded-full ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'}`} src={!selectProfile.PROFILE_IMAGE_URL ? (theme === 'light' ? user_image : user_white) : selectedUserProfileImage} />
 
                                     <div className="flex flex-col">
                                         <span className={`p-0 m-0 ${theme === 'light' ? 'text-[#121212]' : 'text-white'} `}>

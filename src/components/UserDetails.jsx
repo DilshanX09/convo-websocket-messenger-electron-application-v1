@@ -41,7 +41,7 @@ export default function LoggedUserProfileView({ open_model, data, logged_user, u
                <div className={` flex items-center justify-between px-3 py-2 border-b ${theme === 'light' ? 'border-gray-200' : 'border-[#212121]'} mb-3 `}>
 
                     <div className="flex items-center">
-                         <img className={`w-12 h-12 rounded-full  ${theme === 'light' ? null : null}`} src={data.profile_url ? `http://localhost:5000${data.profile_url}` : (theme === 'light' ? user_image : user_white)} alt="profileImageView" />
+                         <img className={`w-12 h-12 rounded-full object-cover ${theme === 'light' ? null : null}`} src={data.profile_url ? `http://localhost:5000${data.profile_url}` : (theme === 'light' ? user_image : user_white)} alt="profileImageView" />
                          <div className="flex flex-col ml-3">
                               <span className={`text-sm ${theme === 'light' ? 'text-[#121212]' : 'text-white'}  SF-pro-regular font-semibold`}>
                                    {data.username ? data.username : "Loading..."}

@@ -252,7 +252,7 @@ export default function Message({
                                                                       src={imageUrl}
                                                                       alt="attachment"
                                                                       onClick={() => open_image_preview_model(imageUrl)}
-                                                                      className={`cursor-pointer max-w-[300px] max-h-[200px] p-[2px] rounded-md mb-1 ${isSender ? "bg-[#075e54]" : "bg-[#202c33]"}`}
+                                                                      className={`cursor-pointer max-w-[400px] max-h-[300px] p-[2px] rounded-md mb-1 ${isSender ? "bg-[#075e54]" : "bg-[#202c33]"}`}
                                                                  />
                                                             )}
 
