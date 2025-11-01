@@ -1,6 +1,6 @@
 **Convo websocket messaging application**
 
-<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/c895affe-006b-4a91-b10f-19a2e2d81042" />
+<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/06a05dad-ffab-41e3-bb06-fd2077b4a4c5" />
 
 **A modern, real-time messaging platform built for seamless communication**
 
