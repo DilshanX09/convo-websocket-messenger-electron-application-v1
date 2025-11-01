@@ -160,7 +160,7 @@ const ProfileScreen = () => {
                                    </label>
                                    <div className="mt-2 flex items-center gap-x-3">
 
-                                        <img className={`rounded-full w-20 h-20 object-fill p-1 ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'} `} src={url ? `http://localhost:5000${url}` : (theme === 'light' ? user_image : user_white)} />
+                                        <img className={`rounded-full w-20 h-20 object-cover p-1 ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'} `} src={url ? `http://localhost:5000${url}` : (theme === 'light' ? user_image : user_white)} />
 
                                         <button className={`relative ${theme === 'light' ? 'bg-white text-black border border-gray-200' : 'bg-[#2b2b2b] text-white'} px-5 py-2 cursor-pointer rounded-full  text-sm`} onClick={() => document.getElementById('my_modal_1').showModal()}>Change</button>
 
