@@ -136,7 +136,7 @@ export default function ProfilePreview(
                                                        onMouseEnter={() => { selectFriend.PROFILE_IMAGE_URL ? set_media_asset_preview(selected_user_profile_image) : null }}
                                                        onMouseLeave={() => { set_media_asset_preview(null) }}
                                                        src={selectFriend.PROFILE_IMAGE_URL ? selected_user_profile_image : (theme === 'light' ? user : user_white)}
-                                                       className={`w-28 h-28 mt-5 rounded-full ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'} `}
+                                                       className={`w-28 h-28 object-cover mt-5 rounded-full ${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'} `}
                                                   />
                                              </div>
                                              <div className="flex flex-col items-center mt-2">
@@ -179,7 +179,7 @@ export default function ProfilePreview(
                                              <p className={`mb-4 SF-pro-regular ${theme === 'light' ? 'text-black' : 'text-white'}`}>Off</p>
 
                                              <p className={`${theme === 'light' ? 'text-gray-500' : 'text-gray-400'} mb-1`}>Mute notifications</p>
-                                             <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-600 mt-1">
+                                             <button className="bg-[#2B2B2B] text-white px-3 py-1 rounded hover:bg-gray-600 mt-1">
                                                   🔕 Mute
                                              </button>
                                         </div>
