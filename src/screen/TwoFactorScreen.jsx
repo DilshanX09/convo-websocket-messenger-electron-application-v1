@@ -39,7 +39,7 @@ export default function TwoFactorScreen() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/user/2FA-verify",
+        "http://localhost:5000/api/v1/auth/2FA-verify",
         {
           uuid,
           code,
@@ -52,7 +52,7 @@ export default function TwoFactorScreen() {
       } else if (response.data.message) {
         seterroror(response.data.message);
         setTimeout(() => {
-          Navigate("/friend/chat/conversation");
+          Navigate("/chats");
         }, 1000);
       }
     } catch (Exception) {
