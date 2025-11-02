@@ -50,7 +50,7 @@ export default function DeviceInformationScreen() {
      const handle2FA = async (e) => {
           const checked = e.target.checked;
           setTwoFactorEnabled(checked);
-          await axios.post(`http://localhost:5000/api/v1/user/2FA-Handle`, { id: user, status: checked ? true : false });
+          await axios.post(`http://localhost:5000/api/v1/auth/2FA-Handle`, { id: user, status: checked ? true : false });
      };
 
 
@@ -154,7 +154,7 @@ export default function DeviceInformationScreen() {
                          <div>
                               <input
                                    type="checkbox"
-                                   className="toggle toggle-accent border border-[#e4e4e4]"
+                                   className="toggle border border-[#e4e4e4]"
                                    onChange={handle2FA}
                                    checked={twoFactorEnabled}
                               />
