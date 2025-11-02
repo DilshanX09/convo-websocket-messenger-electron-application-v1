@@ -24,6 +24,16 @@ const LoginScreen = () => {
 
      const { theme, toggleTheme } = useContext(ThemeContext);
 
+     const getServerMessage = (msg) => {
+          if (!msg) return '';
+          if (typeof msg === 'string') return msg;
+          if (typeof msg === 'object') {
+               if (msg.error) return String(msg.error);
+               if (msg.message) return String(msg.message);
+               try { return JSON.stringify(msg); } catch (e) { return String(msg); }
+          }
+          return String(msg);
+     }
 
      const togglePasswordVisibility = () => {
           setShowPassword(!showPassword);
@@ -101,7 +111,7 @@ const LoginScreen = () => {
                                    exit={{ opacity: 0, scale: 0.95 }}
                                    className="fixed right-5 bottom-5 text-gray-500 cursor-pointer">
                                    <span className={`${theme == 'light' ? 'text-gray-700 bg-[#f6f6f6] border border-[#e4e4e4]' : 'text-white bg-[#2b2b2b] '} px-3 py-2 SF-pro-regular text-sm rounded-md`} >
-                                        {serverResponse}
+                                        {getServerMessage(serverResponse)}
                                    </span>
                               </motion.div>
                          )

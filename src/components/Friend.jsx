@@ -35,8 +35,8 @@ const Friend = React.forwardRef(({ friend, selected_person, isActive, setSelectU
 
 
                     {
-                         !friend.PROFILE_IMAGE_URL ? <img src={theme === 'light' ? user : user_white} className={`${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'} ${friend.STATUS == 'Online' && 'border-green-500 object-cover border-[2px]'}  w-14 h-14 mr-3 rounded-full `} /> : <img
-                              className={`w-14 h-14 mr-3 object-cover rounded-full ${friend.STATUS == 'Online' && 'border-green-500 border-[2px]'} `}
+                         !friend.PROFILE_IMAGE_URL ? <img src={theme === 'light' ? user : user_white} className={`${theme === 'light' ? 'bg-gray-100' : 'bg-[#2b2b2b]'}  w-14 h-14 mr-3 rounded-full `} /> : <img
+                              className={`w-14 h-14 mr-3 object-cover rounded-full `}
                               src={`http://localhost:5000${friend.PROFILE_IMAGE_URL}`}
                               alt="profile_image"
                          />

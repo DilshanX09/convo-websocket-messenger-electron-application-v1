@@ -163,7 +163,7 @@ export default function Message({
 
      return (
           groupedMessages.length > 0 && (
-               <div className="mb-4 mx-[90px] relative">
+               <div className="mb-4 md:mx-[70px] relative">
 
                     {groupedMessages.map((group, groupIndex) => (
 

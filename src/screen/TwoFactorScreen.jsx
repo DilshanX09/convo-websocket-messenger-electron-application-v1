@@ -12,7 +12,7 @@ export default function TwoFactorScreen() {
   const { uuid, email } = location.state;
   const { theme, toggleTheme } = React.useContext(ThemeContext);
   const [code, setCode] = React.useState(null);
-  const [error, seterroror] = React.useState(false);
+  const [error, setError] = React.useState(false);
 
   const hideEmail = email.split("@")[0].slice(0, 4) + "*******@" + email.split("@")[1];
 
@@ -26,20 +26,20 @@ export default function TwoFactorScreen() {
       console.log(response.data);
 
     } catch (Exception) {
-      seterroror("Failed to resend OTP. Please try again later.");
+      setError("Failed to resend OTP. Please try again later.");
       console.log('erroror in Resend OTP:', Exception);
     }
   }
 
   const handleSubmit = async () => {
 
-    if (!code) seterroror("Please enter the verification code.");
+    if (!code) setError("Please enter the verification code.");
 
-    if (!uuid) seterroror("User ID is missing.");
+    if (!uuid) setError("User ID is missing.");
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/user/2FA-verify",
+        "http://localhost:5000/api/v1/auth/2FA-verify",
         {
           uuid,
           code,
@@ -47,16 +47,16 @@ export default function TwoFactorScreen() {
         { withCredentials: true }
       );
 
-      if (response.data.erroror) {
-        seterroror(response.data.erroror);
+      if (response.data.error) {
+        setError(response.data.error);
       } else if (response.data.message) {
-        seterroror(response.data.message);
+        setError(response.data.message);
         setTimeout(() => {
-          Navigate("/friend/chat/conversation");
+          Navigate("/chats");
         }, 1000);
       }
     } catch (Exception) {
-      seterroror("Verification failed. Please check your code and try again.");
+      setError("Verification failed. Please check your code and try again.");
       console.log("erroror in Two Factor Authentication:", Exception);
     }
   };

@@ -202,15 +202,15 @@ router.post('/2FA-Handle', (req, res) => {
      const params = [id];
 
      database.query(query, params, (error, results) => {
-          if (error) return res.status(500).json({ error: 'Database error' });
+          if (error) res.status(500).json({ error: 'Database error' });
           if (status) {
                database.query("UPDATE `users` SET `AUTH_2FA` = ? WHERE UUID = ?", [1, id], (err) => {
-                    if (err) return res.status(500).json({ error: 'Database error' });
+                    if (err) res.status(500).json({ error: 'Database error' });
                });
           } else {
                if (results[0].AUTH_2FA === 1) {
                     database.query("UPDATE `users` SET `AUTH_2FA` = ? WHERE UUID = ?", [0, id], (err) => {
-                         if (err) return res.status(500).json({ error: 'Database error' });
+                         if (err) res.status(500).json({ error: 'Database error' });
                     });
                }
           }

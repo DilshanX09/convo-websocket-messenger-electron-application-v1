@@ -219,8 +219,8 @@ export default function ProfilePreview(
                                                   duration: 0.4,
                                                   ease: "easeOut",
                                              }}
-                                             className="w-[400px] h-[400px] top-0 left-[650px] absolute border-gray-200">
-                                             <img src={show_media_asset_preview} className="p-1 w-full h-full rounded-lg" />
+                                             className="w-[400px] h-[400px] top-0 object-cover left-[650px] absolute border-gray-200">
+                                             <img src={show_media_asset_preview} className="p-1 w-full h-full object-cover rounded-lg" />
                                         </motion.div>
                                    )
                               }
